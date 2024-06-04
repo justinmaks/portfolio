@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useEffect } from 'react';
+import { CssBaseline } from '@mui/material';
+import Profile from './Profile';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 500; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      starsContainer.appendChild(star);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CssBaseline />
+      <div id="background"></div>
+      <div id="stars" className="stars"></div>
+      <Profile />
     </div>
   );
 }
