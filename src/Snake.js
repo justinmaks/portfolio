@@ -99,7 +99,7 @@ const Snake = () => {
 
   if (isGameOver) {
     return (
-      <div className="App">
+      <div className="App" style={{ textAlign: 'center', color: 'white' }}>
         <h2>Highest Score: {highestScore}</h2>
         <h1>You lost!</h1>
         <p>Press any arrow key or WASD to restart.</p>
@@ -108,7 +108,7 @@ const Snake = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{ textAlign: 'center', color: 'white' }}>
       <h2>Highest Score: {highestScore}</h2>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <div
