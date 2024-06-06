@@ -1,7 +1,9 @@
+// src/Profile.js
 import React from 'react';
 import { Container, Typography, Box, Link, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Profile = () => {
   return (
@@ -22,6 +24,11 @@ const Profile = () => {
           <Link href="https://github.com/justinmaks" target="_blank" rel="noopener">
             <IconButton aria-label="GitHub" color="primary">
               <GitHubIcon fontSize="large" />
+            </IconButton>
+          </Link>
+          <Link href="mailto:justin@maksimczuk.com" target="_blank" rel="noopener">
+            <IconButton aria-label="Email" color="primary">
+              <EmailIcon fontSize="large" />
             </IconButton>
           </Link>
         </Box>
