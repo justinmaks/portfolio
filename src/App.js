@@ -1,7 +1,11 @@
 // src/App.js
 import React, { useEffect } from 'react';
 import { CssBaseline } from '@mui/material';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Profile from './Profile';
+import Navbar from './Navbar';
+import Tools from './Tools';
+import Snake from './Snake';
 import './App.css';
 
 function App() {
@@ -17,12 +21,17 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <Router>
       <CssBaseline />
+      <Navbar />
       <div id="background"></div>
       <div id="stars" className="stars"></div>
-      <Profile />
-    </div>
+      <Routes>
+        <Route path="/" element={<Profile />} />
+        <Route path="/tools" element={<Tools />} />
+        <Route path="/snake" element={<Snake />} />
+      </Routes>
+    </Router>
   );
 }
 
