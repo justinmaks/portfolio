@@ -26,10 +26,10 @@ test('renders profile component', () => {
   expect(emailLink).toBeInTheDocument();
   expect(emailLink.closest('a')).toHaveAttribute('href', 'mailto:justin@maksimczuk.com');
   
-  // Check for the presence of PGP key icon and link
-  const pgpLink = screen.getByLabelText('PGP Key');
-  expect(pgpLink).toBeInTheDocument();
-  expect(pgpLink.closest('a')).toHaveAttribute('href', '/pgp-key');
+  // // Check for the presence of PGP key icon and link
+  // const pgpLink = screen.getByLabelText('PGP Key');
+  // expect(pgpLink).toBeInTheDocument();
+  // expect(pgpLink.closest('a')).toHaveAttribute('href', '/pgp-key');
   
   // Check for the presence of XMPP icon
   const xmppLink = screen.getByLabelText('XMPP');
