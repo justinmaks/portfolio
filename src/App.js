@@ -6,6 +6,7 @@ import Profile from './Profile';
 import Navbar from './Navbar';
 import Tools from './Tools';
 import Snake from './Snake';
+import PgpKey from './PgpKey';
 import './App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Profile />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/snake" element={<Snake />} />
+        <Route path="/pgp-key" element={<PgpKey />} />
       </Routes>
     </Router>
   );

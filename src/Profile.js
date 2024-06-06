@@ -4,6 +4,7 @@ import { Container, Typography, Box, Link, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
 
 const Profile = () => {
   return (
@@ -26,9 +27,14 @@ const Profile = () => {
               <GitHubIcon fontSize="large" />
             </IconButton>
           </Link>
-          <Link href="mailto:justin@maksimczuk.com" target="_blank" rel="noopener">
+          <Link href="mailto:your-email@example.com" target="_blank" rel="noopener">
             <IconButton aria-label="Email" color="primary">
               <EmailIcon fontSize="large" />
+            </IconButton>
+          </Link>
+          <Link href="/pgp-key" target="_blank" rel="noopener">
+            <IconButton aria-label="PGP Key" color="primary">
+              <LockIcon fontSize="large" />
             </IconButton>
           </Link>
         </Box>
