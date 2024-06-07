@@ -10,6 +10,7 @@ const Profile = () => {
   const [anchorElEmail, setAnchorElEmail] = useState(null);
   const [anchorElXMPP, setAnchorElXMPP] = useState(null);
   const [showPGPKey, setShowPGPKey] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const handleEmailPopoverOpen = (event) => {
     setAnchorElEmail(event.currentTarget);
@@ -27,12 +28,20 @@ const Profile = () => {
 
   const handleXmppPopoverClose = () => {
     setAnchorElXMPP(null);
+    setCopied(false); // Reset copied state when popover closes
   };
 
   const openXMPP = Boolean(anchorElXMPP);
 
   const togglePGPKey = () => {
     setShowPGPKey(!showPGPKey);
+  };
+
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
+    });
   };
 
   const pgpKey = `-----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -85,9 +94,7 @@ const Profile = () => {
   J+O9ec/XRvTOErSaooDusfjNhcVirZv7zfqV1SUW8fzOjrBl8BkJKrA+i2hrUjxE
   0KxeYUoXAmWb1xLdsv4Chze1EC/yM+etfuUFH8X0ENnl1P1BNkLNJ8IeJGO2
   =Djul
-  -----END PGP PUBLIC KEY BLOCK-----
-  
-`;
+  -----END PGP PUBLIC KEY BLOCK-----`;
 
   return (
     <Container maxWidth="sm" style={{ position: 'relative', zIndex: 1, marginTop: '100px', color: 'white' }}>
@@ -145,7 +152,7 @@ const Profile = () => {
             color="primary"
             onMouseEnter={handleXmppPopoverOpen}
             onMouseLeave={handleXmppPopoverClose}
-            onClick={handleXmppPopoverOpen}
+            onClick={() => copyToClipboard('stin@xmpp.jp')}
           >
             <ChatIcon fontSize="large" />
           </IconButton>
@@ -167,7 +174,7 @@ const Profile = () => {
             onClose={handleXmppPopoverClose}
             disableRestoreFocus
           >
-            <Typography sx={{ p: 1 }}>stin@xmpp.jp</Typography>
+            <Typography sx={{ p: 1 }}>{copied ? 'Copied to clipboard!' : 'stin@xmpp.jp'}</Typography>
           </Popover>
           <Box mt={2}>
             <Button variant="contained" color="primary" onClick={togglePGPKey}>

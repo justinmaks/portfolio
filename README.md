@@ -2,7 +2,6 @@
 
 ## TODO
 - fix PGP key formatting, make copy-able
-- make xmpp copy-able
 
 ## Available Scripts
 
