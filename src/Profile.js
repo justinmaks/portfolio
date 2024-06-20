@@ -194,7 +194,8 @@ const Profile = () => {
                 whiteSpace: 'pre-wrap',
                 wordBreak: 'break-word',
                 overflow: 'auto',
-                maxHeight: '60vh',
+                maxHeight: '55vh',
+                fontSize: '12px',
               }}
             >
               {pgpKey}
