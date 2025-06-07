@@ -9,7 +9,7 @@ const Navbar = () => {
       <Toolbar style={{ justifyContent: 'center' }}>
         <Box>
           <Button color="inherit" component={Link} to="/" style={{ fontSize: '1.25rem' }}>Home</Button>
-          <Button color="inherit" component={Link} to="/tools" style={{ fontSize: '1.25rem' }}>Tools</Button>
+          <Button color="inherit" component={Link} to="/projects" style={{ fontSize: '1.25rem' }}>Projects</Button>
           <Button color="inherit" component={Link} to="/snake" style={{ fontSize: '1.25rem' }}>Snake</Button>
         </Box>
       </Toolbar>

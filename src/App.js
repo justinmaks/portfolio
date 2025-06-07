@@ -4,7 +4,7 @@ import { CssBaseline } from '@mui/material';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Profile from './Profile';
 import Navbar from './Navbar';
-import Tools from './Tools';
+import Projects from './Projects';
 import Snake from './Snake';
 import './App.css';
 
@@ -28,7 +28,7 @@ function App() {
       <div id="stars" className="stars"></div>
       <Routes>
         <Route path="/" element={<Profile />} />
-        <Route path="/tools" element={<Tools />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/snake" element={<Snake />} />
       </Routes>
     </Router>
