@@ -30,7 +30,7 @@ const Tile = ({ text, url }) => {
 const Projects = () => {
   const tiles = [
     { text: "IP Retrieval API - FastAPI Python", url: "https://ip.devmaks.biz" },
-    { text: "Go-based Visitor Map Visualizer", url: "https://devmaks.biz" },
+    { text: "Visitor Map Visualizer (Go)", url: "https://devmaks.biz" },
     { text: "Free TV and Movie Streaming (Next.js)", url: "https://strmnow.lol" },
     { text: "Static Storefront (Astro)", url: "https://polisheaglemeatmarket.com" }
   ];
