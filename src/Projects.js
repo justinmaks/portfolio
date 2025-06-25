@@ -29,9 +29,10 @@ const Tile = ({ text, url }) => {
 
 const Projects = () => {
   const tiles = [
-    { text: "IP Retrieval API - FastAPI Python", url: "https://ip.devmaks.biz" },
+    { text: "IP Retrieval API (FastAPI Python)", url: "https://ip.devmaks.biz" },
     { text: "Modern Visitor Map Visualizer (Next.js)", url: "https://map.devmaks.biz" },
-    { text: "Visitor Map Visualizer (Go)", url: "https://devmaks.biz" },
+    { text: "Linkly - Full-featured link shortening service with analytics (React)", url: "https://linkly.devmaks.biz" },
+    { text: "Visitor Map Visualizer (Go)", url: "https://map.devmaks.biz" },
     { text: "Free TV and Movie Streaming (Next.js)", url: "https://strmnow.lol" },
     { text: "Static Storefront (Astro)", url: "https://polisheaglemeatmarket.com" }
   ];
