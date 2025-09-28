@@ -29,6 +29,7 @@ const Tile = ({ text, url }) => {
 
 const Projects = () => {
   const tiles = [
+    { text: "EnvNow - Environment variable manager with Vault integration (Go)", url: "https://github.com/justinmaks/envnow" },
     { text: "IP Retrieval API (Go)", url: "https://me.devmaks.biz" },
     { text: "Modern Visitor Map Visualizer (Next.js)", url: "https://map.devmaks.biz" },
     { text: "Linkly - Full-featured link shortening service with analytics (React)", url: "https://linkly.devmaks.biz" },
